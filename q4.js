@@ -3,7 +3,15 @@ A palindrome is a word, number, or other sequence of characters that reads the s
 */
 
 function checkPalindrome(textInput) {
-    
+    var reverseInput = "";
+    for (var i = textInput.length; i>=0;i--) {
+        reverseInput+=textInput.charAt(i);
+    }
+    if (reverseInput == textInput) {
+        return true;
+    } else {
+        return false
+    }
 }
 
 // Test for palindrome
@@ -12,3 +20,5 @@ let testString = "racecar"; // true
 let testString2 = "hello"; // false
 
 // TODO: display the result of the test strings in the console
+console.log(checkPalindrome(testString));
+console.log(checkPalindrome(testString2));
